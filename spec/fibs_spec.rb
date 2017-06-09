@@ -1,4 +1,4 @@
-require_relative '../fibs'
+require_relative '../lib/fibs'
 
 describe Fibs do
 
