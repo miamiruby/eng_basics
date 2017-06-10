@@ -1,0 +1,14 @@
+= form_with(model: fib, local: true) do |form|
+  - if fib.errors.any?
+    #error_explanation
+      %h2
+        = pluralize(fib.errors.count, "error")
+        prohibited this fib from being saved:
+      %ul
+        - fib.errors.full_messages.each do |message|
+          %li= message
+  .field
+    = form.label :iterations
+    = form.number_field :iterations, id: :fib_iterations
+  .actions
+    = form.submit
