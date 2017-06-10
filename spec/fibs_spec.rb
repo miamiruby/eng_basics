@@ -26,7 +26,7 @@ describe Fibs do
       end
 
       it 'does not call generate_fibs' do
-        expect { subject.generate(gen_fib_count).generate_fibs }.to raise_error
+        expect { subject.generate(gen_fib_count).generate_fibs }.to raise_error(Exception)
       end
     end
   end
